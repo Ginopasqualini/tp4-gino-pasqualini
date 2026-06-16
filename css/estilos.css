@@ -1,0 +1,205 @@
+/* ==========================================================================
+   Configuración Base y Paleta de Colores (Modelo de Caja)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50; /* Gris azulado oscuro */
+    background-color: #f8f9fa; /* Fondo claro, limpio */
+    line-height: 1.6;
+}
+
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 40px auto; /* Centrado horizontal con aire arriba/abajo */
+    padding: 0 20px;
+}
+
+/* Jerarquía Visual */
+h1 { font-size: 2.5rem; margin-bottom: 20px; color: #1a365d; }
+h2 { font-size: 1.8rem; margin-bottom: 15px; color: #2b6cb0; }
+h3 { font-size: 1.4rem; margin-bottom: 10px; }
+p { margin-bottom: 20px; }
+
+/* ==========================================================================
+   Navegación y Encabezado (Convenciones de Steve Krug)
+   ========================================================================== */
+.header-global {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.logo-img {
+    height: 50px;
+    display: block;
+}
+
+.menu-global {
+    display: flex;
+    gap: 25px;
+}
+
+/* ==========================================================================
+   Personalización de Enlaces (Estados Obligatorios)
+   ========================================================================== */
+
+/* 1. Estado Base (Sin visitar) */
+.nav-link:link {
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* 2. Estado Visitado */
+.nav-link:visited {
+    color: #718096; /* Color sutilmente diferente para no confundir la historia */
+}
+
+/* 3. Estado Hover (Feedback Visual Claro) */
+.nav-link:hover {
+    color: #2b6cb0;
+    text-decoration: underline; /* El subrayado clásico reafirma que es clickeable */
+}
+
+/* 4. Estado Activo (Al hacer clic) */
+.nav-link:active {
+    color: #1a365d;
+}
+
+/* "Usted está aquí" - Indicador de página actual */
+.nav-link.activo {
+    color: #ffffff !important; /* Sobrescribe estados anteriores */
+    background-color: #2b6cb0;
+    border-radius: 4px;
+}
+
+/* Indicador de posición (Breadcrumbs) */
+.indicador-posicion {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 30px;
+}
+.indicador-posicion a {
+    color: #2b6cb0;
+    text-decoration: none;
+}
+.indicador-posicion a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Simulación de Botones (Elementos Enlace Estilizados)
+   ========================================================================== */
+.btn-accion {
+    display: inline-block; /* Requisito para emular comportamiento de bloque */
+    padding: 12px 28px;
+    background-color: #3182ce; /* Azul llamativo */
+    color: #ffffff !important;
+    text-decoration: none; /* Elimina subrayado molesto de botón */
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+.btn-accion:hover {
+    background-color: #2b6cb0; /* Cambio obvio de color al pasar el cursor */
+}
+
+.btn-secundario {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #edf2f7;
+    color: #2d3748 !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-secundario:hover {
+    background-color: #e2e8f0;
+}
+
+/* ==========================================================================
+   Maquetación de Contenido Complementario
+   ========================================================================== */
+.hero-section {
+    background-color: #ebf8ff;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #3182ce;
+}
+
+.grid-destinos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.tarjeta-destino {
+    flex: 1;
+    min-width: 280px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.galeria-imagenes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.foto-galeria {
+    flex: 1;
+    min-width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #cbd5e0;
+}
+
+.caja-contacto {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+/* Footer */
+.footer-global {
+    background-color: #1a202c;
+    color: #a0aec0;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+.footer-global a {
+    color: #63b3ed;
+    text-decoration: none;
+}
+
+.footer-global a:hover {
+    text-decoration: underline;
+}
